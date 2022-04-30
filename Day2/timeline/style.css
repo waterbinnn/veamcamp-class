@@ -1,0 +1,67 @@
+/* CSS Resets */
+body,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Layouts */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Components */
+.header {
+  background-color: orange;
+}
+
+.main {
+  background-color: #999;
+  padding: 40px 0;
+}
+
+.timeline {
+  background-color: dodgerblue;
+  margin: 0 -30px;
+}
+
+.timeline-item {
+  background-color: orange;
+  width: 50%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-of-type(even) {
+  margin-left: auto;
+}
+
+.year {
+  background-color: #222;
+  color: white;
+}
+
+.year::befor {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto -25px;
+  width: 50px;
+  height: 50px;
+}
+
+/* 따로 위치를 잡아주려니 마진값이 안맞음 그래서 부모요소에 네거티브 마진을 써준것 */
+.year_left::before {
+  right: 0;
+}
+
+.year_right::before {
+  left: 0;
+}
